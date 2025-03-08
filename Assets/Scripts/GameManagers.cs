@@ -45,7 +45,6 @@ public class GameManagers : MonoBehaviour
             GameObject card = cards[i];
             card.transform.SetParent(spawnPoints[i]);
             card.transform.localPosition = Vector3.zero;
-            card.transform.localRotation = Quaternion.Euler(-90, 0, -180) * Quaternion.Euler(0, 180, 0); // Начальный переворот
         }
     }
 
@@ -105,15 +104,15 @@ public class GameManagers : MonoBehaviour
 
     IEnumerator RotateBack(Card card)
     {
-        Quaternion targetRotation = card.transform.parent.rotation * Quaternion.Euler(0, 180, 0);
+        Quaternion targetRotation = card.transform.parent.rotation * Quaternion.Euler(0, 0, 0);
         float time = 0f;
-
+        var t = card.transform.parent.rotation;
         while (time < 0.3f)
         {
-            card.transform.rotation = Quaternion.Lerp(card.transform.rotation, targetRotation, time / 0.3f);
+            card.transform.parent.rotation = Quaternion.Lerp(t, targetRotation, time / 0.3f);
             time += Time.deltaTime;
             yield return null;
         }
-        card.transform.rotation = targetRotation;
+        card.transform.parent.rotation = targetRotation;
     }
 }

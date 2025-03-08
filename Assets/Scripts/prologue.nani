@@ -153,6 +153,7 @@ Deviant: "Заходи, сыграем."
 
 
 # Part3
+@loadScene GameScene additive! if:game_status==0
 @hideAll
 @hideUI MainUI
 @hideChars

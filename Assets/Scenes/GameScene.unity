@@ -462,7 +462,7 @@ Transform:
   m_GameObject: {fileID: 604601088}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.45, y: 2.0389142, z: -12.134}
+  m_LocalPosition: {x: 3.45, y: 2.35, z: -12.134}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1286,7 +1286,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1989523140572035989}
-  - component: {fileID: 3221899488088384626}
   m_Layer: 0
   m_Name: Card (17)
   m_TagString: Untagged
@@ -1309,27 +1308,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 604601089}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &532420668595640578
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8133621449926686168}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.68186784, y: 0.14830068, z: 1}
-  m_Center: {x: -0, y: 0, z: 0}
 --- !u!1 &566128247486827025
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,7 +1317,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3231478458432378578}
-  - component: {fileID: 6917380982263903158}
   m_Layer: 0
   m_Name: Card (8)
   m_TagString: Untagged
@@ -1356,7 +1333,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6610558302309631960}
-  - component: {fileID: 3045062360630152903}
   m_Layer: 0
   m_Name: Card (3)
   m_TagString: Untagged
@@ -1373,7 +1349,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8153756501336760263}
-  - component: {fileID: 4499546329280465408}
   m_Layer: 0
   m_Name: Card (9)
   m_TagString: Untagged
@@ -1381,27 +1356,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &808795114757988250
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4877023915826884797}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.68186784, y: 0.14830068, z: 1}
-  m_Center: {x: -0, y: 0, z: 0}
 --- !u!1 &823883617788898074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1411,7 +1365,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6332314190305357295}
-  - component: {fileID: 2094239238592469017}
   m_Layer: 0
   m_Name: Card (7)
   m_TagString: Untagged
@@ -1428,7 +1381,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7538956029280665577}
-  - component: {fileID: 3820588772277582717}
   m_Layer: 0
   m_Name: Card (5)
   m_TagString: Untagged
@@ -1451,48 +1403,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 604601089}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1660105736371221085
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3707834366791421717}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.68186784, y: 0.14830068, z: 1}
-  m_Center: {x: -0, y: 0, z: 0}
---- !u!65 &1750871195858392235
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8893249192571162470}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.68186784, y: 0.14830068, z: 1}
-  m_Center: {x: -0, y: 0, z: 0}
 --- !u!4 &1989523140572035989
 Transform:
   m_ObjectHideFlags: 0
@@ -1508,27 +1418,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 604601089}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2094239238592469017
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 823883617788898074}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.68186784, y: 0.14830068, z: 1}
-  m_Center: {x: -0, y: 0, z: 0}
 --- !u!1 &2113181466406806700
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,7 +1427,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8634317576597202177}
-  - component: {fileID: 6006228608850949814}
   m_Layer: 0
   m_Name: Card (15)
   m_TagString: Untagged
@@ -1546,27 +1434,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &2182686621174247079
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4023206826353841154}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.68186784, y: 0.14830068, z: 1}
-  m_Center: {x: -0, y: 0, z: 0}
 --- !u!4 &2298058347736811293
 Transform:
   m_ObjectHideFlags: 0
@@ -1606,7 +1473,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3511394206849481873}
-  - component: {fileID: 5112662261815980885}
   m_Layer: 0
   m_Name: Card (13)
   m_TagString: Untagged
@@ -1614,48 +1480,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &3045062360630152903
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 720811637672313798}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.68186784, y: 0.14830068, z: 1}
-  m_Center: {x: -0, y: 0, z: 0}
---- !u!65 &3221899488088384626
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 205780814791212437}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.68186784, y: 0.14830068, z: 1}
-  m_Center: {x: -0, y: 0, z: 0}
 --- !u!4 &3231478458432378578
 Transform:
   m_ObjectHideFlags: 0
@@ -1671,27 +1495,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 604601089}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &3321293982401010600
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8315256564497659276}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.68186784, y: 0.14830068, z: 1}
-  m_Center: {x: -0, y: 0, z: 0}
 --- !u!1 &3336882945995443085
 GameObject:
   m_ObjectHideFlags: 0
@@ -1701,7 +1504,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4682170688904799916}
-  - component: {fileID: 3887583470356830237}
   m_Layer: 0
   m_Name: Card (14)
   m_TagString: Untagged
@@ -1718,7 +1520,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6668460293152299445}
-  - component: {fileID: 3740988301258704898}
   m_Layer: 0
   m_Name: Card (4)
   m_TagString: Untagged
@@ -1765,7 +1566,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4402075772690681828}
-  - component: {fileID: 1660105736371221085}
   m_Layer: 0
   m_Name: Card (1)
   m_TagString: Untagged
@@ -1773,69 +1573,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &3740988301258704898
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3416690370631549557}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.68186784, y: 0.14830068, z: 1}
-  m_Center: {x: -0, y: 0, z: 0}
---- !u!65 &3820588772277582717
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1504361702773066861}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.68186784, y: 0.14830068, z: 1}
-  m_Center: {x: -0, y: 0, z: 0}
---- !u!65 &3887583470356830237
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3336882945995443085}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.68186784, y: 0.14830068, z: 1}
-  m_Center: {x: -0, y: 0, z: 0}
 --- !u!1 &4023206826353841154
 GameObject:
   m_ObjectHideFlags: 0
@@ -1845,7 +1582,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2804566772433048961}
-  - component: {fileID: 2182686621174247079}
   m_Layer: 0
   m_Name: Card (6)
   m_TagString: Untagged
@@ -1868,27 +1604,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 604601089}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &4499546329280465408
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800781180860527451}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.68186784, y: 0.14830068, z: 1}
-  m_Center: {x: -0, y: 0, z: 0}
 --- !u!4 &4682170688904799916
 Transform:
   m_ObjectHideFlags: 0
@@ -1913,7 +1628,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3624758906875934219}
-  - component: {fileID: 808795114757988250}
   m_Layer: 0
   m_Name: Card (10)
   m_TagString: Untagged
@@ -1921,48 +1635,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &5112662261815980885
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2870512174364909717}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.68186784, y: 0.14830068, z: 1}
-  m_Center: {x: -0, y: 0, z: 0}
---- !u!65 &5454866579577734148
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8991618629996886965}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.68186784, y: 0.14830068, z: 1}
-  m_Center: {x: -0, y: 0, z: 0}
 --- !u!4 &5643418609837228316
 Transform:
   m_ObjectHideFlags: 0
@@ -1978,27 +1650,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 604601089}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6006228608850949814
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2113181466406806700}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.68186784, y: 0.14830068, z: 1}
-  m_Center: {x: -0, y: 0, z: 0}
 --- !u!4 &6332314190305357295
 Transform:
   m_ObjectHideFlags: 0
@@ -2044,27 +1695,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 604601089}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6917380982263903158
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 566128247486827025}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.68186784, y: 0.14830068, z: 1}
-  m_Center: {x: -0, y: 0, z: 0}
 --- !u!1 &7143731197327585172
 GameObject:
   m_ObjectHideFlags: 0
@@ -2074,7 +1704,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2298058347736811293}
-  - component: {fileID: 7195556270078601768}
   m_Layer: 0
   m_Name: Card (11)
   m_TagString: Untagged
@@ -2082,27 +1711,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &7195556270078601768
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7143731197327585172}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.68186784, y: 0.14830068, z: 1}
-  m_Center: {x: -0, y: 0, z: 0}
 --- !u!4 &7538956029280665577
 Transform:
   m_ObjectHideFlags: 0
@@ -2127,7 +1735,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5643418609837228316}
-  - component: {fileID: 532420668595640578}
   m_Layer: 0
   m_Name: Card (12)
   m_TagString: Untagged
@@ -2159,7 +1766,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 193526336492628364}
-  - component: {fileID: 3321293982401010600}
   m_Layer: 0
   m_Name: Card (2)
   m_TagString: Untagged
@@ -2191,7 +1797,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1618457111557265613}
-  - component: {fileID: 1750871195858392235}
   m_Layer: 0
   m_Name: Card (16)
   m_TagString: Untagged
@@ -2208,7 +1813,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 214735685723855932}
-  - component: {fileID: 5454866579577734148}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged

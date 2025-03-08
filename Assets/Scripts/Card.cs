@@ -25,18 +25,19 @@ public class Card : MonoBehaviour
 
     IEnumerator FlipCard()
     {
+        print("FlipCard");
         isFlipping = true;
-        var t = transform.rotation;
-        Quaternion targetRotation = (transform.rotation == initialRotation) ? initialRotation * Quaternion.Euler(0, 180, 0) : initialRotation;
+        var t = transform.parent.rotation;
+        Quaternion targetRotation = (transform.parent.rotation == initialRotation) ? initialRotation * Quaternion.Euler(0, 0, -180) : initialRotation;
         float time = 0f;
 
-        while (time <= 1f)
+        while (time <= 0.3f)
         {
-            transform.rotation = Quaternion.Lerp(t, targetRotation, time);
-            time += Time.deltaTime/10;
+            transform.parent.rotation = Quaternion.Lerp(t, targetRotation, time/0.3f);
+            time += Time.deltaTime;
             yield return null;
         }
-        transform.rotation = targetRotation;
+        transform.parent.rotation = targetRotation;
         GameManagers.instance.CheckMatch(this);
         isFlipping = false;
     }

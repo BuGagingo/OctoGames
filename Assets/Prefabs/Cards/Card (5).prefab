@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 1286995122378687339}
   - component: {fileID: 5496333903615068159}
   - component: {fileID: 3735214004205297959}
+  - component: {fileID: -7636173517861675588}
   m_Layer: 0
   m_Name: Card (5)
   m_TagString: Untagged
@@ -152,6 +153,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ee2c59232a528a46956b615f3ed31e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardID: 5
+  isMatched: 0
+--- !u!54 &-7636173517861675588
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7900161821874024687}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8097315035671557604
 GameObject:
   m_ObjectHideFlags: 0
