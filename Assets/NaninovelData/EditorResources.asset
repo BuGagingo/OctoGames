@@ -144,3 +144,50 @@ MonoBehaviour:
     - name: ScriptNavigatorUI
       pathPrefix: UI
       guid: 735d6aa767879aa469134858c5b2f0a7
+    - name: MainUI
+      pathPrefix: UI
+      guid: 1e02a05577947164e8141ff2fb334b77
+  - Id: Scripts
+    Resources:
+    - name: prologue
+      pathPrefix: Scripts
+      guid: 9933b573bb0e99445bb27fee440b13c8
+  - Id: Backgrounds/b0c18603-2523-4f05-8ccd-c5a2c8234dbf
+    Resources:
+    - name: bg_1
+      pathPrefix: Backgrounds/MainBackground
+      guid: 61979a002696f5e43abe04d4c7c649ad
+    - name: bg_2
+      pathPrefix: Backgrounds/MainBackground
+      guid: df0d7fb9da60d7e4e9aaa53eae8ac7f4
+    - name: bg_3
+      pathPrefix: Backgrounds/MainBackground
+      guid: 9208b44e9eed21748b44ca69b77533e5
+  - Id: Characters/334ec0c6-7575-4410-bb34-4cf1244e0f8a
+    Resources:
+    - name: smile
+      pathPrefix: Characters/Alice
+      guid: 4c19ba63d00159c449bb5b7950141e81
+    - name: sad
+      pathPrefix: Characters/Alice
+      guid: 59feb39cde2d72a4a814417d6a175a22
+    - name: idle
+      pathPrefix: Characters/Alice
+      guid: 9b7c07404a93da24da6d65daf7df98c0
+    - name: happy
+      pathPrefix: Characters/Alice
+      guid: 495a736638ee925449c112006009e866
+  - Id: Characters/6c27246a-2b30-4d64-aaea-edc1191387a2
+    Resources:
+    - name: smile
+      pathPrefix: Characters/Deviant
+      guid: 27d2b817adfc46b4f89f7bedeb53a942
+    - name: sad
+      pathPrefix: Characters/Deviant
+      guid: bfcafdaf3969a6749a3bcc7b611ed300
+    - name: idle
+      pathPrefix: Characters/Deviant
+      guid: e7857898754c5d34d9942da316bbe135
+    - name: happy
+      pathPrefix: Characters/Deviant
+      guid: e4e23b6cf9efe0146ba603225a7455bd
