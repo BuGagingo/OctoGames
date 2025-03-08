@@ -153,9 +153,20 @@ Deviant: "Заходи, сыграем."
 
 
 # Part3
+@hideAll
+@hideUI MainUI
+@hideChars
+
+@printer MyPrinter
+Deviant: "Все просто, тебе нужно найти пары"
+
+@print "Хмм... Почему она проиграла?" printer:MyPrinter
+@wait 1
+@hidePrinter
+@set game_status=1
 
 
-# Part3_adter_game
+# Part3_after_game
 
 
 # Part4
