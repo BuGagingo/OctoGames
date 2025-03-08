@@ -191,3 +191,8 @@ MonoBehaviour:
     - name: happy
       pathPrefix: Characters/Deviant
       guid: e4e23b6cf9efe0146ba603225a7455bd
+  - Id: TextPrinters/e02f42cd-c247-406d-9ff0-954bac796f53
+    Resources:
+    - name: MyPrinter
+      pathPrefix: TextPrinters
+      guid: 991768f454489bb4ab852b18e9a3ade1

@@ -65,5 +65,6 @@ namespace Naninovel
 
         [Doc("Returns display name of a character actor with the provided ID.", "GetName(\"Kohaku\")")]
         public static string GetName (string id) => Engine.GetService<ICharacterManager>().GetDisplayName(id);
+    
     }
 }

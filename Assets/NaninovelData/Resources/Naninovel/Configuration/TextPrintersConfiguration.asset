@@ -70,6 +70,7 @@ MonoBehaviour:
     - Wide
     - Chat
     - Bubble
+    - MyPrinter
     metas:
     - Implementation: Naninovel.UITextPrinter, Elringus.Naninovel.Runtime, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
@@ -233,6 +234,44 @@ MonoBehaviour:
         - Naninovel.ProjectResourceProvider, Elringus.Naninovel.Runtime, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
       guid: 19f5e5f8-3ad7-4e81-9d01-92b2ffaedb7c
+      customData:
+        rid: -2
+      Pivot: {x: 0.5, y: 0.5}
+      PixelsPerUnit: 100
+      EnableDepthPass: 1
+      DepthAlphaCutoff: 0.5
+      CustomTextureShader: {fileID: 0}
+      CustomSpriteShader: {fileID: 0}
+      RenderTexture: {fileID: 0}
+      RenderRectangle:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1
+        height: 1
+      AutoReset: 1
+      AutoDefault: 1
+      AutoWait: 1
+      WaitAfterRevealSkip: 1
+      AutoLineBreak: 0
+      AddToBacklog: 1
+      SplitBacklogMessages: 0
+      StopVoice: 0
+      ChangeVisibilityDuration: 0.3
+      WaitVisibilityBeforePrint: 0
+      PrintFrameDelay: 1
+      RevealInstantly: 0
+      AuthoredTemplate: 
+    - Implementation: Naninovel.UITextPrinter, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      Loader:
+        PathPrefix: TextPrinters
+        ProviderTypes:
+        - Naninovel.AddressableResourceProvider, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        - Naninovel.ProjectResourceProvider, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      guid: e02f42cd-c247-406d-9ff0-954bac796f53
       customData:
         rid: -2
       Pivot: {x: 0.5, y: 0.5}

@@ -1,2 +1,133 @@
+# Part1
+@back bg_1
+@hideUI MainUI
 
+; Настройка сцены и ввод имени
+
+
+@print "Кто эта девушка... Она явно чем-то обеспокоена" printer:MyPrinter
+
+@char Alice.smile pos:+15,-50 scale:0.8
+@printer Bubble.Left pos:35,75
+Alice: "Привет, ты похож на доброго парня! Как тебя зовут?" 
+
+@input name summary:"Введите ваше имя"
 @stop
+; Переход к следующей части сценария
+Alice.happy: "Рада познакомиться, {name}!" 
+
+@char Alice.sad pos:+25,-50 scale:0.8
+
+
+@print "Ты явно чем-то обеспокоена, чем-то могу помочь?" printer:MyPrinter
+
+@printer Bubble.Left pos:45,75
+Alice: "Да, я проиграла свои трусики в карты, и мне нужно их обратно!"
+@char Alice.happy pos:+25,-50 scale:0.8
+
+
+@choice "Я помогу тебе найти трусики" goto:.HAPPY_CHOICE
+@choice "О ты сейчас без трусиков? Ха-ха-ха" goto:.SAD_CHOICE
+@stop
+
+
+# SAD_CHOICE
+@char Alice.sad pos:+10,-50 scale:0.8
+@printer Bubble.Left pos:30,75
+Alice: "Ха-ха, ну ты и шутник! Видимо тебя тоже забавляет, то что я тут без трусиков!"
+Alice: "ИЗВРАЩЕНЕЦ!"
+
+
+@char Alice.idle pos:+10,-50 scale:0.8
+Alice: "Ты можешь помочь мне найти мои трусики?"
+
+@print "Да, конечно, я помогу тебе найти трусики" printer:MyPrinter
+@goto .BRA
+
+# HAPPY_CHOICE
+@char Alice.happy pos:+10,-50 scale:0.8
+@printer Bubble.Left pos:30,75
+Alice: "Спасибо, {name}! Ты такой милый!"
+
+# BRA
+@print "Но если он такой Извращенец, мне нечего ему предложить..." printer:MyPrinter
+
+@char Alice.sad pos:+10,-50 scale:0.8
+@printer Bubble.Left pos:30,75
+Alice: "Нууу, Блин! Я не знаю, что делать! Может быть ты мне поможешь?"
+
+@print "У тебя есть идеи, что еще ему предложить?" printer:MyPrinter
+
+@char Alice.smile pos:+10,-50 scale:0.8
+@printer Bubble.Left pos:30,75
+Alice: "Я вот всем сердцем верю в тебя, поэтому сыграй на мой лифчик!"
+
+@print "Ты уверена?" printer:MyPrinter
+
+@char Alice.sad pos:+10,-50 scale:0.8
+@printer Bubble.Left pos:30,75
+Alice: "Отвернись, пока я не сниму его!"
+
+@char Alice.happy pos:+10,-50 scale:0.8
+Alice: "Готово! Держи! Хуже уже не будет!"
+
+
+
+@hideChars
+@hidePrinter
+@showUI MainUI
+@wait 1
+@set quest_stage+=1
+@stop
+
+# Part1_after_dialogue
+@print "Так, тут явно мне не найти трусики, но я могу попробовать найти их в другом месте" printer:MyPrinter
+@wait 1
+@hidePrinter
+@stop
+
+#Part2
+@back bg_2
+@hideUI MainUI
+@print "В переулке ты замечаешь парня, который ловко перебирает колоду карт" printer:MyPrinter
+
+@char Deviant.idle pos:+60,-50 scale:0.8
+@char Deviant look:left
+
+# Вступительный диалог
+@print "Вдалеке ты замечаешь странного парня, он нервно перебирает карты в руках..." printer:Wide
+Unknow: "Эй, ты! Стой там. Что тебе нужно?"
+
+player: "Я слышал, что ты выиграл трусики у одной девушки... Это правда?"
+
+@char Unknow.smirk pos:+60,-50 scale:0.8
+Unknow: "Ха! Да, эта бедняжка проиграла мне в карты. Но зачем тебе это знать?"
+
+player: "Я хочу их вернуть. Давай сыграем на ставку."
+
+Unknow: "Ставку? И что ты можешь предложить?"
+
+player: "Если я проиграю — ты заберёшь лифчик Алисы, а если выиграю — вернёшь мне её трусики."
+
+@char Unknow.laugh pos:+60,-50 scale:0.8
+Unknow: "Ха-ха-ха! Серьёзно? Ну ладно! Мне как раз нужен комплект!"
+
+# Выбор игрока
+@choice "Сыграть в карты" goto:.START_GAME
+@choice "Отказаться и уйти" goto:.LEAVE
+
+# Начало мини-игры
+# Здесь можно подключить мини-игру через async сервис
+# или просто сделать заглушку, если мини-игра ещё не готова
+
+# Игра начинается
+label .START_GAME
+@print "Ты садишься за стол, и игра начинается..." printer:Wide
+@goto startCardGame.nani
+@stop
+
+#Part3
+
+
+#Part4
+

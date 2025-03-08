@@ -823,6 +823,7 @@ GameObject:
   - component: {fileID: 2360444567970328979}
   - component: {fileID: 1708801851700522622}
   - component: {fileID: 722524861694862054}
+  - component: {fileID: 1986150986809015968}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -932,7 +933,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2360444567970328979}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1986150986809015968}
+        m_TargetAssemblyTypeName: Naninovel.PlayScript, Elringus.Naninovel.Runtime
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &722524861694862054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -978,6 +991,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1986150986809015968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2891212937176571700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5975c9748a52c8d43b34c8d7c428cacd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptName: 
+  scriptText: '@goto prologue.Part1_after_dialogue if:quest_stage<=2'
+  playOnAwake: 0
+  disableWaitInput: 0
 --- !u!1 &3084763961765086090
 GameObject:
   m_ObjectHideFlags: 0
@@ -1524,6 +1553,7 @@ GameObject:
   - component: {fileID: 1379602685631269332}
   - component: {fileID: 4815387591439498250}
   - component: {fileID: 7108164348581348601}
+  - component: {fileID: 2594309659079199456}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1591,6 +1621,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2594309659079199456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3798745060254526620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6696779e645d234418984655af282c04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3882925429439047039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2275,7 +2317,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 4
+  m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 390, y: 66.4}
@@ -2296,6 +2338,7 @@ GameObject:
   - component: {fileID: 6306036015961478118}
   - component: {fileID: 6306036015961478117}
   - component: {fileID: 6306036015961478116}
+  - component: {fileID: 3289363382164022522}
   m_Layer: 5
   m_Name: MainUI
   m_TagString: Untagged
@@ -2362,7 +2405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableInteraction: 0
-  visibleOnAwake: 1
+  visibleOnAwake: 0
   controlOpacity: 1
   fadeTime: 0.3
   ignoreTimeScale: 1
@@ -2437,6 +2480,26 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3289363382164022522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6306036015961478139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63d103c4bc7ecf94e9629be04cfa4045, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 3798745060254526620}
+  blockLoc3: {fileID: 2483370269711533424}
+  questLogs:
+  - {fileID: 6831858688179343596}
+  - {fileID: 1332879232924764344}
+  - {fileID: 4769021996359888405}
+  - {fileID: 3084763961765086090}
+  - {fileID: 6142750799379049845}
 --- !u!1 &6676314662289384557
 GameObject:
   m_ObjectHideFlags: 0
