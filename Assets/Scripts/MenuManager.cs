@@ -25,11 +25,11 @@ public class MenuManager : MonoBehaviour
     void Update()
     {
         VariableManager.UpdateVariables();
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab) && VariableManager.quest_stage != 0)
         {
             map.SetActive(true);
         }
-        if (Input.GetKeyUp(KeyCode.Tab))
+        if (Input.GetKeyUp(KeyCode.Tab) && VariableManager.quest_stage != 0)
         {
             map.SetActive(false);
         }

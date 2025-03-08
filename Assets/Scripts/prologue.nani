@@ -42,14 +42,14 @@ Alice: "ИЗВРАЩЕНЕЦ!"
 Alice: "Ты можешь помочь мне найти мои трусики?"
 
 @print "Да, конечно, я помогу тебе найти трусики" printer:MyPrinter
-@goto .BRA
+@goto .DEVIANT_CHOICE
 
 # HAPPY_CHOICE
 @char Alice.happy pos:+10,-50 scale:0.8
 @printer Bubble.Left pos:30,75
 Alice: "Спасибо, {name}! Ты такой милый!"
 
-# BRA
+# DEVIANT_CHOICE
 @print "Но если он такой Извращенец, мне нечего ему предложить..." printer:MyPrinter
 
 @char Alice.sad pos:+10,-50 scale:0.8
@@ -86,48 +86,77 @@ Alice: "Готово! Держи! Хуже уже не будет!"
 @hidePrinter
 @stop
 
-#Part2
+# Part2
 @back bg_2
 @hideUI MainUI
 @print "В переулке ты замечаешь парня, который ловко перебирает колоду карт" printer:MyPrinter
 
-@char Deviant.idle pos:+60,-50 scale:0.8
+@char Deviant.sad pos:+60,-50 scale:0.8
 @char Deviant look:left
 
-# Вступительный диалог
-@print "Вдалеке ты замечаешь странного парня, он нервно перебирает карты в руках..." printer:Wide
-Unknow: "Эй, ты! Стой там. Что тебе нужно?"
 
-player: "Я слышал, что ты выиграл трусики у одной девушки... Это правда?"
+@char Deviant.idle pos:+80,-50 scale:0.8
+@printer Bubble.Right pos:60,75
+Deviant: "Эй, ты! Стой там. Что тебе нужно?"
 
-@char Unknow.smirk pos:+60,-50 scale:0.8
-Unknow: "Ха! Да, эта бедняжка проиграла мне в карты. Но зачем тебе это знать?"
 
-player: "Я хочу их вернуть. Давай сыграем на ставку."
+@print "Я слышал, что ты выиграл трусики у одной девушки... Это правда?" printer:MyPrinter
 
-Unknow: "Ставку? И что ты можешь предложить?"
+@char Deviant.happy pos:+80,-50 scale:0.8
+@printer Bubble.Right pos:60,75
+Deviant: "Ха! Да, эта бедняжка проиграла мне в карты. Но зачем тебе это знать?"
 
-player: "Если я проиграю — ты заберёшь лифчик Алисы, а если выиграю — вернёшь мне её трусики."
-
-@char Unknow.laugh pos:+60,-50 scale:0.8
-Unknow: "Ха-ха-ха! Серьёзно? Ну ладно! Мне как раз нужен комплект!"
-
-# Выбор игрока
-@choice "Сыграть в карты" goto:.START_GAME
-@choice "Отказаться и уйти" goto:.LEAVE
-
-# Начало мини-игры
-# Здесь можно подключить мини-игру через async сервис
-# или просто сделать заглушку, если мини-игра ещё не готова
-
-# Игра начинается
-label .START_GAME
-@print "Ты садишься за стол, и игра начинается..." printer:Wide
-@goto startCardGame.nani
+@choice "Я хочу вернуть трусики девушке" goto:.RETURN
+@choice "Я своего рода тоже ценитель, видишь лифчик уже у меня" goto:.BRA
 @stop
 
-#Part3
+# RETURN
+@char Deviant.sad pos:+80,-50 scale:0.8
+@printer Bubble.Right pos:60,75
+Deviant: "Ну и дела! Я погляжу тут у нас подкаблучник?"
+@goto .AFTER_CHOICE
+@stop
+
+# BRA
+@char Deviant.smile pos:+80,-50 scale:0.8
+@printer Bubble.Right pos:60,75
+Deviant: "Ха-ха, ну ты молодец! Я вижу ты тоже ценитель!"
+@goto .AFTER_CHOICE
+@stop
+
+# AFTER_CHOICE
+@char Deviant.sad pos:+80,-50 scale:0.8
+@printer Bubble.Right pos:60,75
+Deviant: "Что предлагаешь?"
+@char Deviant.idle pos:+80,-50 scale:0.8
+
+@print "Давай сыграем, я ставлю лифчик ты трусики" printer:MyPrinter
+
+@char Deviant.happy pos:+80,-50 scale:0.8
+@printer Bubble.Right pos:60,75
+Deviant: "Кто выиграет, того и комплект, согласен!"
+Deviant: "Заходи, сыграем."
+
+@hideChars
+@hidePrinter
+@showUI MainUI
+@wait 1
+@set quest_stage+=1
+
+@stop
+
+# Part2_wait_game
+@print "Так, нам явно нужно будет обыграть этого парня!" printer:MyPrinter
+@wait 1
+@hidePrinter
+@stop
 
 
-#Part4
+# Part3
+
+
+# Part3_adter_game
+
+
+# Part4
 

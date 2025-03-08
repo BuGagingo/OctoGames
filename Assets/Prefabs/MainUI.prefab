@@ -1004,7 +1004,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptName: 
-  scriptText: '@goto prologue.Part1_after_dialogue if:quest_stage<=2'
+  scriptText: '@goto prologue.Part1_after_dialogue if:quest_stage<=2
+
+    @goto prologue.Part2_wait_game
+    if:quest_stage==3'
   playOnAwake: 0
   disableWaitInput: 0
 --- !u!1 &3084763961765086090
@@ -3086,6 +3089,7 @@ GameObject:
   - component: {fileID: 9051736692287065111}
   - component: {fileID: 132344758949317328}
   - component: {fileID: 4859311464479174218}
+  - component: {fileID: 8436182456646281777}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -3195,7 +3199,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9051736692287065111}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8436182456646281777}
+        m_TargetAssemblyTypeName: Naninovel.PlayScript, Elringus.Naninovel.Runtime
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4859311464479174218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3241,3 +3257,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &8436182456646281777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8735394935289820334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5975c9748a52c8d43b34c8d7c428cacd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptName: 
+  scriptText: '@goto prologue.Part2 if:quest_stage==2
+
+    @goto prologue.Part2_wait_game
+    if:quest_stage==3'
+  playOnAwake: 0
+  disableWaitInput: 0
