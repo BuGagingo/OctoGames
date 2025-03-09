@@ -1,9 +1,10 @@
+@goto .Part3_after_game if:game_status==3
+@goto .Part1 if:quest_stage==0
+@stop
 # Part1
 @back bg_1
+@bgm bg_music
 @hideUI MainUI
-
-; Настройка сцены и ввод имени
-
 
 @print "Кто эта девушка... Она явно чем-то обеспокоена" printer:MyPrinter
 
@@ -13,11 +14,10 @@ Alice: "Привет, ты похож на доброго парня! Как т�
 
 @input name summary:"Введите ваше имя"
 @stop
-; Переход к следующей части сценария
+
 Alice.happy: "Рада познакомиться, {name}!" 
 
 @char Alice.sad pos:+25,-50 scale:0.8
-
 
 @print "Ты явно чем-то обеспокоена, чем-то могу помочь?" printer:MyPrinter
 
@@ -25,18 +25,15 @@ Alice.happy: "Рада познакомиться, {name}!"
 Alice: "Да, я проиграла свои трусики в карты, и мне нужно их обратно!"
 @char Alice.happy pos:+25,-50 scale:0.8
 
-
 @choice "Я помогу тебе найти трусики" goto:.HAPPY_CHOICE
 @choice "О ты сейчас без трусиков? Ха-ха-ха" goto:.SAD_CHOICE
 @stop
-
 
 # SAD_CHOICE
 @char Alice.sad pos:+10,-50 scale:0.8
 @printer Bubble.Left pos:30,75
 Alice: "Ха-ха, ну ты и шутник! Видимо тебя тоже забавляет, то что я тут без трусиков!"
 Alice: "ИЗВРАЩЕНЕЦ!"
-
 
 @char Alice.idle pos:+10,-50 scale:0.8
 Alice: "Ты можешь помочь мне найти мои трусики?"
@@ -71,11 +68,10 @@ Alice: "Отвернись, пока я не сниму его!"
 @char Alice.happy pos:+10,-50 scale:0.8
 Alice: "Готово! Держи! Хуже уже не будет!"
 
-
-
 @hideChars
 @hidePrinter
 @showUI MainUI
+@showUI Pick_1
 @wait 1
 @set quest_stage+=1
 @stop
@@ -151,12 +147,13 @@ Deviant: "Заходи, сыграем."
 @hidePrinter
 @stop
 
-
 # Part3
 @loadScene GameScene additive! if:game_status==0
 @hideAll
 @hideUI MainUI
 @hideChars
+@stopBgm
+@bgm action_music
 
 @printer MyPrinter
 Deviant: "Все просто, тебе нужно найти пары"
@@ -165,10 +162,151 @@ Deviant: "Все просто, тебе нужно найти пары"
 @wait 1
 @hidePrinter
 @set game_status=1
-
+@stop
 
 # Part3_after_game
 
+@printer Bubble.Right pos:60,75
+Deviant: "Я удивлен!"
+Deviant: "Ты выиграл! Вот трусики, которые ты искал!"
+@showUI Pick_2
+Deviant: "Может еще раз сыграем?"
+
+@print "Как нибудь, в другой раз" printer:MyPrinter
+@print "Я пойду" printer:MyPrinter
+@hidePrinter
+@hideChars
+@loadScene MainScene additive!
+@goto .Part4
+@stop
 
 # Part4
+@back bg_2
+@stopBgm
+@bgm bg_music
+@print "Интересно, что такого в этом белье?" printer:MyPrinter
+@print "Он явно был заинтересован в комплекте" printer:MyPrinter
+@print "Надо найти Алису" printer:MyPrinter
+@hidePrinter
+@showUI MainUI
+@set quest_stage+=1
+@stop
 
+# Part4_after_game_1
+@print "Тут не видно Алисы, может она там же?" printer:MyPrinter
+@hidePrinter
+@wait 1
+@stop
+
+# Part4_after_game_2
+@print "Туда мне пока путь закрыт. Он явно сильно возбужден, не хочу накалять обстановку..." printer:MyPrinter
+@hidePrinter
+@wait 1
+@stop
+
+# Part5
+@back bg_1
+@hideUI MainUI
+@char Alice.sad pos:+25,-50 scale:0.8
+@printer Bubble.Left pos:45,75
+Alice: "{name} как успехи? Нашел мои трусики?"
+
+
+@print "Было тяжело, но справился!" printer:MyPrinter
+@char Alice.smile pos:+25,-50 scale:0.8
+
+@char Deviant.sad pos:+85,-50 scale:0.8
+@printer Bubble.Right pos:65,75
+Deviant: "СТООЙ! Не отдавай ей белье!"
+
+@char Alice.sad pos:+25,-50 scale:0.8
+@printer Bubble.Left pos:45,75
+Alice: "Опять ты! Что тебе нужно?"
+
+@print "Что? Почему?" printer:MyPrinter
+@char Deviant.happy pos:+85,-50 scale:0.8
+@printer Bubble.Right pos:65,75
+Deviant: "Это же комплект волшебницы! Он может исполнить любое твое желание!"
+Deviant: "Если отдашь мне, я помогу тебе исполнить любое желание!"
+Deviant: "Девшуки? Золото? Слава? Все что угодно!"
+
+@print "Хммм..." printer:MyPrinter
+
+@char Alice.idle pos:+25,-50 scale:0.8
+@printer Bubble.Left pos:45,75
+Alice: "Не слушай его, {name}! Он обманщик!"
+
+@print "Я выиграл комплект у тебя в карты, с чего вдруг я должен его тебе отдать?" printer:MyPrinter
+
+@char Deviant.idle pos:+85,-50 scale:0.8
+@printer Bubble.Right pos:65,75
+Deviant: "Не спорю карточный долг это святое"
+Deviant: "Но я тебе помогу с настройкой"
+Deviant: "Мы можем стать отличными напарниками"
+
+@char Alice.sad pos:+25,-50 scale:0.8
+@printer Bubble.Left pos:45,75
+Alice: "Вы серьезно?!!!"
+Alice: "Вы сейчас похоже на двух извращенцев!"
+Alice: "{name}, ты же не такой!"
+Alice: "Не оставишь же ты милую девушку с голой задницей?"
+
+@print "А с чего мне его и тебе отдавать?" printer:MyPrinter
+@print "Вдруг он говорит правду?" printer:MyPrinter
+
+@char Alice.idle pos:+25,-50 scale:0.8
+@printer Bubble.Left pos:45,75
+Alice: "Он просто извращенец! Который продаст мои трусики таким же извращенцам!"
+
+@print "Ну и устроили вы тут! АХ-ХА-ХА" printer:MyPrinter
+@print "Мне прям смешно от самой ситуации, что же мне с вами делать?" printer:MyPrinter
+
+@char Alice.smile pos:+25,-50 scale:0.8
+@char Deviant.sad pos:+85,-50 scale:0.8
+
+@choice "Отдать трусики Парню" goto:.GIVE_DEVIANT
+@choice "Отдать трусики Алисе" goto:.GIVE_ALICE
+@choice "Оставить комплект себе" goto:.TAKE_SELF
+@stop
+
+# GIVE_DEVIANT
+@char Deviant.happy pos:+85,-50 scale:0.8
+@printer Bubble.Right pos:65,75
+Deviant: "Красавчик! Пойдем за кружкой пива обсудим планы!"
+
+@char Alice.idle pos:+25,-50 scale:0.8
+@printer Bubble.Left pos:45,75
+Alice: "Тупые извращенцы! Я вас обоих ненавижу!"
+Alice: "Ждите кары!"
+@goto .FINAL_PART
+@stop
+
+# GIVE_ALICE
+@char Deviant.sad pos:+85,-50 scale:0.8
+@printer Bubble.Right pos:65,75
+Deviant: "Подкаблучник! Ходи оглядывайся!
+
+@char Alice.happy pos:+25,-50 scale:0.8
+@printer Bubble.Left pos:45,75
+Alice: "{name}, спасибо, ты очень даже милый парень, я в тебе не ошиблась!"
+Alice: "Пойдем угощу тебя пивом!"
+@goto .FINAL_PART
+@stop
+
+# TAKE_SELF
+@char Deviant.idle pos:+85,-50 scale:0.8
+@printer Bubble.Right pos:65,75
+Deviant: "Ну и баран!"
+
+@char Alice.idle pos:+25,-50 scale:0.8
+@printer Bubble.Left pos:45,75
+Alice: "Я ошиблась в тебе!"
+@goto .FINAL_PART
+@stop
+
+# FINAL_PART
+@hideALL
+@hideChars
+@hidePrinter
+@loadScene EndScene additive!
+@stop

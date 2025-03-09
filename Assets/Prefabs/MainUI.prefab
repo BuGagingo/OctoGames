@@ -687,7 +687,8 @@ MonoBehaviour:
   scriptName: 
   scriptText: '@goto prologue.Part3 if:game_status==0
 
-    @goto prologue.Part3 if:game_status>0'
+    @goto prologue.Part4_after_game_2
+    if:quest_stage==4'
   playOnAwake: 0
   disableWaitInput: 0
 --- !u!1 &2483370269711533424
@@ -1038,7 +1039,9 @@ MonoBehaviour:
   scriptText: '@goto prologue.Part1_after_dialogue if:quest_stage<=2
 
     @goto prologue.Part2_wait_game
-    if:quest_stage==3'
+    if:quest_stage==3
+
+    @goto prologue.Part5 if:quest_stage==4'
   playOnAwake: 0
   disableWaitInput: 0
 --- !u!1 &3084763961765086090
@@ -3304,6 +3307,8 @@ MonoBehaviour:
   scriptText: '@goto prologue.Part2 if:quest_stage==2
 
     @goto prologue.Part2_wait_game
-    if:quest_stage==3'
+    if:quest_stage==3
+
+    @goto prologue.Part4_after_game_1 if:quest_stage==4'
   playOnAwake: 0
   disableWaitInput: 0

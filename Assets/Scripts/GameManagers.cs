@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Naninovel;
 public class GameManagers : MonoBehaviour
 {
     public static GameManagers instance;
@@ -9,6 +9,7 @@ public class GameManagers : MonoBehaviour
     public List<Transform> spawnPoints; // Поинты для спавна
     private Card firstCard, secondCard;
     private int matchedPairs = 0;
+    public static bool canFlip = true;
 
     void Awake()
     {
@@ -28,6 +29,7 @@ public class GameManagers : MonoBehaviour
     void SetupCards()
     {
         List<GameObject> cards = new List<GameObject>();
+        Shuffle(cardPrefabs);
         foreach (var prefab in cardPrefabs)
         {
             cards.Add(Instantiate(prefab));
@@ -61,9 +63,11 @@ public class GameManagers : MonoBehaviour
 
     public void CheckMatch(Card card)
     {
+        canFlip = false;
         if (firstCard == null)
         {
             firstCard = card;
+            canFlip = true;
         }
         else
         {
@@ -74,27 +78,32 @@ public class GameManagers : MonoBehaviour
 
     IEnumerator CheckCards()
     {
-        yield return new WaitForSeconds(2);
+        
 
         if (firstCard.cardID == secondCard.cardID)
         {
             firstCard.isMatched = true;
             secondCard.isMatched = true;
             matchedPairs++;
-
-            if (matchedPairs == cardPrefabs.Count)
+            canFlip = true;
+            if (matchedPairs == spawnPoints.Count/2)
             {
-                Debug.Log("Поздравляю! Все пары найдены!");
+                VariableManager.game_status = 3;
+                VariableManager.SaveVariables();
+                var player = Engine.GetService<IScriptPlayer>();
+                player.Play(0);
             }
         }
         else
         {
+            yield return new WaitForSeconds(1);
             ResetCard(firstCard);
             ResetCard(secondCard);
         }
 
         firstCard = null;
         secondCard = null;
+        
     }
 
     void ResetCard(Card card)
@@ -104,15 +113,18 @@ public class GameManagers : MonoBehaviour
 
     IEnumerator RotateBack(Card card)
     {
-        Quaternion targetRotation = card.transform.parent.rotation * Quaternion.Euler(0, 0, 0);
+        Quaternion targetRotation = new Quaternion(0, 0, 0, 0);  // Rotate back to the initial rotation
         float time = 0f;
+        float duration = 0.3f;
         var t = card.transform.parent.rotation;
-        while (time < 0.3f)
+
+        while (time <= duration)
         {
-            card.transform.parent.rotation = Quaternion.Lerp(t, targetRotation, time / 0.3f);
+            card.transform.parent.rotation = Quaternion.Lerp(t, targetRotation, time / duration);
             time += Time.deltaTime;
             yield return null;
         }
+        canFlip = true;
         card.transform.parent.rotation = targetRotation;
     }
 }

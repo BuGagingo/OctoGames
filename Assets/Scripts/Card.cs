@@ -17,8 +17,9 @@ public class Card : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (!isMatched && !isFlipping)
+        if (!isMatched && !isFlipping && GameManagers.canFlip)
         {
+            GameManagers.canFlip = false;
             StartCoroutine(FlipCard());
         }
     }
@@ -28,15 +29,19 @@ public class Card : MonoBehaviour
         print("FlipCard");
         isFlipping = true;
         var t = transform.parent.rotation;
-        Quaternion targetRotation = (transform.parent.rotation == initialRotation) ? initialRotation * Quaternion.Euler(0, 0, -180) : initialRotation;
+        Quaternion targetRotation = (transform.parent.rotation == initialRotation) 
+            ? initialRotation * Quaternion.Euler(0, 0, -180) 
+            : initialRotation;
         float time = 0f;
+        float duration = 0.3f;
 
-        while (time <= 0.3f)
+        while (time <= duration)
         {
-            transform.parent.rotation = Quaternion.Lerp(t, targetRotation, time/0.3f);
+            transform.parent.rotation = Quaternion.Lerp(t, targetRotation, time / duration);
             time += Time.deltaTime;
             yield return null;
         }
+        GameManagers.canFlip = true;
         transform.parent.rotation = targetRotation;
         GameManagers.instance.CheckMatch(this);
         isFlipping = false;

@@ -147,6 +147,12 @@ MonoBehaviour:
     - name: MainUI
       pathPrefix: UI
       guid: 1e02a05577947164e8141ff2fb334b77
+    - name: Pick_1
+      pathPrefix: UI
+      guid: 55e2eba6f24a34c4f9c6624794ed4267
+    - name: Pick_2
+      pathPrefix: UI
+      guid: 3ab905d8f574a8e4eb58e670cabc849d
   - Id: Scripts
     Resources:
     - name: prologue
@@ -196,3 +202,11 @@ MonoBehaviour:
     - name: MyPrinter
       pathPrefix: TextPrinters
       guid: 991768f454489bb4ab852b18e9a3ade1
+  - Id: Audio
+    Resources:
+    - name: action_music
+      pathPrefix: Audio
+      guid: c7539e82f49a8554cae4b061c0ff1227
+    - name: bg_music
+      pathPrefix: Audio
+      guid: c6c5cd0ee2d7db447be3ac0e13978c23
